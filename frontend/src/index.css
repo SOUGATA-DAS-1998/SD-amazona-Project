@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
+/* header {
   background-color: #404040;
   padding: 1rem;
 }
@@ -15,16 +15,31 @@ header a {
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
+} */
+
+.site-container {
+  min-height: 100vh;
 }
 
 /* List Products */
 main {
-  padding: 1rem;
+  flex: 1;
 }
+
+.btn-primary {
+  background-color: rgba(232, 210, 13, 0.708);
+  color: black;
+  font-weight: 600;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.rating span {
+  color: rgb(223, 171, 39);
 }
 
 .product {
@@ -37,4 +52,8 @@ main {
 }
 .product-info {
   padding: 1rem;
+}
+
+.img-large {
+  max-width: 90%;
 }
