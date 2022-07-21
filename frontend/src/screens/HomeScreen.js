@@ -61,7 +61,7 @@ function HomeScreen() {
           <Row>
             {products.map((product) => (
               // for pushing down items to the new line we use screen size small = 6 mid scrren grid = 4
-              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+              <Col key={product.slug} sm={6} md={5} lg={3} className="mb-3">
                 <Product product={product}></Product>
               </Col>
             ))}
