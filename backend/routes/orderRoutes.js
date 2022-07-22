@@ -24,6 +24,16 @@ orderRouter.post(
   })
 );
 
+// If this Api been put in the last then it would be handeled by /:id api below it
+orderRouter.get(
+  '/mine',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const orders = await Order.find({ user: req.user._id });
+    res.send(orders);
+  })
+);
+
 orderRouter.get(
   '/:id',
   isAuth,

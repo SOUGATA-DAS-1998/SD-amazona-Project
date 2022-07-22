@@ -32,6 +32,16 @@ main {
   font-weight: 600;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(252, 252, 252);
+  font-size: large;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: rgb(26, 209, 9);
+  font-size: large;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
