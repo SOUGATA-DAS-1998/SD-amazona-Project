@@ -7,6 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  font-size: large;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
 /* header {
   background-color: #404040;
   padding: 1rem;
@@ -26,8 +36,9 @@ main {
   flex: 1;
 }
 
-.btn-primary {
-  background-color: rgba(232, 210, 13, 0.708);
+.btn-primary,
+.btn-outline-primary {
+  background-color: rgba(251, 236, 99, 0.952);
   color: black;
   font-weight: 600;
 }
@@ -83,4 +94,32 @@ main {
 .checkout-steps > div.active {
   border-bottom: 0.2rem solid #f08000;
   color: #f08000;
+}
+
+/* sidebar */
+.navbar-brand {
+  font-weight: bold;
+}
+.side-navbar {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: #100901;
+  transition: 0.5s;
+  color: rgb(255, 255, 255);
+}
+
+.site-container {
+  transition: 0.4s;
+}
+.active-cont {
+  margin-left: 240px;
+}
+.active-nav {
+  left: 0;
+}
+
+.text-bold {
+  font-weight: bold;
 }
