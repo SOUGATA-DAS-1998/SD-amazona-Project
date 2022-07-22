@@ -42,7 +42,7 @@ function App() {
           <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
               <LinkContainer to="/">
-                <Navbar.Brand>Shopemania</Navbar.Brand>
+                <Navbar.Brand>Shoppemania</Navbar.Brand>
               </LinkContainer>
 
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
