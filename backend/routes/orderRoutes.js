@@ -6,6 +6,18 @@ import Product from '../models/productModel.js';
 import { isAuth, isAdmin } from '../utils.js';
 
 const orderRouter = express.Router();
+
+//  to return All orders details required fo the orderlist Screen
+orderRouter.get(
+  '/',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const orders = await Order.find().populate('user', 'name');
+    res.send(orders);
+  })
+);
+
 orderRouter.post(
   '/',
   isAuth,
