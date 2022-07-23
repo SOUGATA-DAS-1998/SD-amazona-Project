@@ -9,6 +9,7 @@ import { Store } from '../Store';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { getError } from '../utils';
+import { Helmet } from 'react-helmet-async';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -71,7 +72,7 @@ export default function ProductListScreen() {
     if (window.confirm('Are you sure to create?')) {
       try {
         dispatch({ type: 'CREATE_REQUEST' });
-        const { data } = await axios.post(
+        await axios.post(
           '/api/products',
           {},
           {
@@ -79,7 +80,7 @@ export default function ProductListScreen() {
           }
         );
         toast.success('product created successfully');
-        dispatch({ type: 'CREATE_SUCCESS', payload: data });
+        dispatch({ type: 'CREATE_SUCCESS' });
         // navigate(`/admin/product/${data.product._id}`);
       } catch (err) {
         toast.error(getError(error));
@@ -94,6 +95,9 @@ export default function ProductListScreen() {
     <div>
       <Row>
         <Col>
+          <Helmet>
+            <title>Product List</title>
+          </Helmet>
           <h1>Products</h1>
         </Col>
         <Col className="col text-end">

@@ -21,7 +21,7 @@ const data = {
       name: 'Peter England Slim shirt',
       slug: 'peter-england-slim-shirt',
       category: 'Shirts',
-      image: '/images/p1.jpg', // 679px × 829px
+      image: '/images/p1.jpg', // 3456px × 5184px
       price: 1649,
       countInStock: 10,
       brand: 'Peter',
