@@ -22,10 +22,12 @@ mongoose
 
 const app = express();
 
+// MiddleWares
 // By having this default data in the post request will be converted to JSON object inside req.body
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// API ENDSPOINTS Defining
 //Paypal api
 app.get('/api/keys/paypal', (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
